@@ -25,6 +25,11 @@ public class CarController {
 		this.carServices.saveCar(car);
 	}
 	
+	@GetMapping("/")
+	public String welcomePage() {
+		return "Welcome to the crud app of BNSF";
+	}
+	
 	@GetMapping("/cars")
 	public List<T_POOL_CAR> getAllCars() {
 		return this.carServices.getAllCar();
